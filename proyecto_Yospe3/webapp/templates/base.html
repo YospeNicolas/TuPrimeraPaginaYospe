@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Mi Sitio Web{% endblock %}</title>
+</head>
+<body>
+    <div id="navbar">
+        <ul>
+            <li><a href="{% url 'ingresar_producto' %}">Ingresar Producto</a></li>
+            <li><a href="{% url 'ingresar_cliente' %}">Ingresar Cliente</a></li>
+            <li><a href="{% url 'buscar_producto' %}">Buscar Producto</a></li>
+            <li><a href="{% url 'lista_productos' %}">Lista de Productos</a></li>
+            <li><a href="{% url 'lista_clientes' %}">Lista de Clientes</a></li>
+            <li><a href="{% url 'lista_pedidos' %}">Lista de Pedidos</a></li>
+        </ul>
+    </div>
+    
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
