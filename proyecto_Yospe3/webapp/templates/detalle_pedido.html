@@ -1,0 +1,15 @@
+<!-- webapp/templates/detalle_pedido.html -->
+{% extends 'base.html' %}
+
+{% block title %}Detalle del Pedido{% endblock %}
+
+{% block content %}
+  <h2>Detalle del Pedido</h2>
+
+  <p>Producto: {{ pedido.producto.nombre }}</p>
+  <p>Cantidad: {{ pedido.cantidad }}</p>
+  <p>Cliente: {{ pedido.cliente.nombre }}</p>
+  <p>Total: {{ pedido.factura.total }}</p>
+
+  <a href="{% url 'lista_pedidos' %}">Volver a la lista de pedidos</a>
+{% endblock %}
